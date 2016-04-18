@@ -268,6 +268,7 @@
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
     <dimen name="padding_small">4dp</dimen>
     <dimen name="scrollview_height">400dp</dimen>
     <dimen name="toolbar_elevation">6dp</dimen>
