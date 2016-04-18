@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- For toolbar / appbar -->
+        <item name="colorPrimary">@color/red_500</item>
+
+        <!-- For status bar -->
+        <item name="colorPrimaryDark">@color/red_800</item>
+
+        <!-- For fab, checkbox, edit text underline
+            Should be contrast with color primary,
+            In color theory this is called Complementary color.
+        -->
+        <item name="colorAccent">@color/light_green_600</item>
+
+        <item name="android:toolbarStyle">@style/Theme.AppCompat.Light</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+</style>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material"/>
     <style name="Base.TextAppearance.AppCompat.Body1" parent="android:TextAppearance.Material.Body1"/>
     <style name="Base.TextAppearance.AppCompat.Body2" parent="android:TextAppearance.Material.Body2"/>
