@@ -209,6 +209,7 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <dimen name="appbar_height">180dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -268,6 +269,7 @@
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
     <dimen name="padding_small">4dp</dimen>
+    <dimen name="scrollview_height">400dp</dimen>
     <dimen name="toolbar_elevation">6dp</dimen>
     <dimen name="toolbar_height">80dp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
