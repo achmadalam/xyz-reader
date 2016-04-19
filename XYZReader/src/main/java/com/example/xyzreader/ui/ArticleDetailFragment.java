@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
+import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -91,6 +92,13 @@ public class ArticleDetailFragment extends Fragment implements
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+
+        bindViews();
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
@@ -105,7 +113,7 @@ public class ArticleDetailFragment extends Fragment implements
             public void onClick(View v) {
                 startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
                         .setType("text/plain")
-                        .setText("Some sample text")
+                        .setText("Share this story")
                         .getIntent(), getString(R.string.action_share)));
             }
         });
@@ -120,7 +128,8 @@ public class ArticleDetailFragment extends Fragment implements
         }
 
         if (mCursor != null) {
-            mToolbarLayout.setTitle("");
+//            mToolbarLayout.setTitle("");
+            mToolbarLayout.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
             mTitleText.setText(mCursor.getString(ArticleLoader.Query.TITLE));
             mByLine.setText(Html.fromHtml(
                     DateUtils.getRelativeTimeSpanString(
@@ -132,6 +141,8 @@ public class ArticleDetailFragment extends Fragment implements
                             + "</font>"));
             mBodyText.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
             Log.d("asdf", "photo urlnya " + mCursor.getString(ArticleLoader.Query.PHOTO_URL));
+            Picasso.with(getActivity())
+                    .load("http://placekitten.com/600/600").fit().into(mPhoto);
 //            Picasso.with(getActivity())
 //                    .load(mCursor.getString(ArticleLoader.Query.PHOTO_URL)).into(mPhoto);
         }
