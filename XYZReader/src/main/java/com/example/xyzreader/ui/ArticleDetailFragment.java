@@ -16,12 +16,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.NetworkImageView;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
-import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -42,7 +41,7 @@ public class ArticleDetailFragment extends Fragment implements
     private long mItemId;
     private View mRootView;
 
-    @Bind(R.id.photo) ImageView mPhoto;
+    @Bind(R.id.photo) NetworkImageView mPhoto;
     @Bind(R.id.toolbar) Toolbar mToolbar;
     @Bind(R.id.share_fab) FloatingActionButton mFab;
     @Bind(R.id.article_body) TextView mBodyText;
@@ -128,9 +127,9 @@ public class ArticleDetailFragment extends Fragment implements
         }
 
         if (mCursor != null) {
-//            mToolbarLayout.setTitle("");
-            mToolbarLayout.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
-            mTitleText.setText(mCursor.getString(ArticleLoader.Query.TITLE));
+            String title = mCursor.getString(ArticleLoader.Query.TITLE);
+            mToolbarLayout.setTitle(title);
+            mTitleText.setText(title);
             mByLine.setText(Html.fromHtml(
                     DateUtils.getRelativeTimeSpanString(
                             mCursor.getLong(ArticleLoader.Query.PUBLISHED_DATE),
@@ -140,11 +139,16 @@ public class ArticleDetailFragment extends Fragment implements
                             + mCursor.getString(ArticleLoader.Query.AUTHOR)
                             + "</font>"));
             mBodyText.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
-            Log.d("asdf", "photo urlnya " + mCursor.getString(ArticleLoader.Query.PHOTO_URL));
-            Picasso.with(getActivity())
-                    .load("http://placekitten.com/600/600").fit().into(mPhoto);
-//            Picasso.with(getActivity())
-//                    .load(mCursor.getString(ArticleLoader.Query.PHOTO_URL)).into(mPhoto);
+
+            mPhoto.setImageUrl(
+                    mCursor.getString(ArticleLoader.Query.PHOTO_URL),
+                    ImageLoaderHelper.getInstance(getActivity()).getImageLoader());
+
+            // Bug?
+            // Picasso couldn't handle full sized downloaded images
+            // If I change to THUMB_URL, it works just fine.
+            // Picasso.with(getActivity())
+            //        .load(mCursor.getString(ArticleLoader.Query.PHOTO_URL)).into(mPhoto);
         }
     }
 

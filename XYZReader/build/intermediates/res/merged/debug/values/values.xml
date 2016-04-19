@@ -272,6 +272,7 @@
     <dimen name="padding_medium">8dp</dimen>
     <dimen name="padding_small">4dp</dimen>
     <dimen name="scrollview_height">400dp</dimen>
+    <dimen name="title_margin">42dp</dimen>
     <dimen name="toolbar_elevation">6dp</dimen>
     <dimen name="toolbar_height">80dp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
@@ -321,6 +322,7 @@
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="empty_string" translatable="false">""</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="up">Up</string>
     <string name="welcome_xyz_reader">Welcome to XYZ Reader!</string>
@@ -1565,6 +1567,9 @@
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
     </style>
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
+    </style>
+    <style name="TextAppearanceTransparent">
+        <item name="android:textColor">@android:color/transparent</item>
     </style>
     <style name="Theme.AppCompat" parent="Base.Theme.AppCompat"/>
     <style name="Theme.AppCompat.CompactMenu" parent="Base.Theme.AppCompat.CompactMenu"/>

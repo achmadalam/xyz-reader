@@ -47,4 +47,8 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
+    <style name="TextAppearanceTransparent">
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
 </resources>

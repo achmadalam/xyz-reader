@@ -4,39 +4,52 @@
     api-level="23"
     density="hdpi"
     format="7"
-    timestamp="1461044918693484000" >
+    timestamp="1461048244781953000" >
 
     <task
         name="javac"
-        duration="519" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="24" />
+        duration="0" />
     <task
         name="verifier"
-        duration="6" />
+        duration="0" />
 
     <artifact
-        location="/Users/aldokelvianto/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-        type="DEX" />
+        location="/Users/aldokelvianto/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="1461043320871456000" >
+    <build timestamp="1461046960671847000" >
         <artifact
             location="/Users/aldokelvianto/AndroidStudioProjects/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="1461044384449392000" >
+    <build timestamp="1461047928041586000" >
         <artifact
-            location="/Users/aldokelvianto/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_"
-            type="RESOURCES" />
+            location="/Users/aldokelvianto/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/aldokelvianto/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
     </build>
-    <build timestamp="1461044918693484000" >
+    <build
+        timestamp="1461048188173206000"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/Users/aldokelvianto/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+            type="DEX" />
         <artifact
             location="/Users/aldokelvianto/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
             type="DEX" />
+    </build>
+    <build timestamp="1461048244781953000" >
+        <artifact
+            location="/Users/aldokelvianto/AndroidStudioProjects/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>
